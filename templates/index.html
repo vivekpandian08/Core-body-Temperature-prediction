@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Temperature Predictor</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Temperature Predictor</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+		<input class="form-input" type="text" name="heartRateAvg" placeholder="Heartrate eg. 50"><br>
+        <input class="form-input" type="text" name="stepRate" placeholder="Step Rate eg. 80"><br>
+        <input class="form-input" type="text" name="skinRH109" placeholder="Skin RH eg. 55.67"><br>
+        <input class="form-input" type="text" name="skinTemp109" placeholder="Skin Temperature 37.4"><br>
+        <input class="form-input" type="text" name="ambientRH110" placeholder="Ambient RH eg. 65"><br>
+        <input class="form-input" type="text" name="Age" placeholder="Age (years) eg. 34"><br>
+        <input class="form-input" type="text" name="hour" placeholder="Hour of the day eg. 0-23"><br>
+    	
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
