@@ -1,4 +1,4 @@
-## Deploying ML Model using Flask
+## Deploying ML Model using Flask in Heroku
 This is a simple project to elaborate how to deploy a Machine Learning model using Flask API
 
 ### Prerequisites
@@ -36,3 +36,5 @@ Enter valid numerical values in all 3 input boxes and hit Predict.
 If everything goes well, you should  be able to see the predcited salary vaule on the HTML page!
 check the output here: http://127.0.0.1:5000/predict
 
+Heroku link:
+https://temperature-predictor.herokuapp.com/
